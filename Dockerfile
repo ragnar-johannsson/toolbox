@@ -20,3 +20,9 @@ RUN apt-get install -y --no-install-recommends \
         ltrace  \
         strace  \
         sysstat
+
+# IO
+RUN apt-get install -y --no-install-recommends \
+        blktrace \
+        iotop    \
+        lsof
