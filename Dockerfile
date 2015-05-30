@@ -26,3 +26,18 @@ RUN apt-get install -y --no-install-recommends \
         blktrace \
         iotop    \
         lsof
+
+# Networking
+RUN apt-get install -y --no-install-recommends \
+        arping          \
+        bridge-utils    \
+        ca-certificates \
+        curl            \
+        ethtool         \
+        iftop           \
+        iproute2        \
+        mtr-tiny        \
+        net-tools       \
+        nicstat         \
+        nmap            \
+        tcpdump
