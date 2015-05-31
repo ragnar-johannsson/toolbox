@@ -84,3 +84,5 @@ RUN git clone https://github.com/ragnar-johannsson/dotfiles.git /tmp/dotfiles \
     && touch /root/.z \
     && rm -rf /tmp/dotfiles
 
+CMD ["/bin/zsh"]
+
