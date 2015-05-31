@@ -66,3 +66,21 @@ RUN echo "deb https://get.docker.com/ubuntu docker main" \
     && apt-get install -y --no-install-recommends lxc-docker-1.5.0 \
     && echo "DOCKER_OPTS=\"-H unix:///docker/docker.sock\"" \
         > /etc/default/docker
+
+# Dotfiles
+RUN git clone https://github.com/ragnar-johannsson/dotfiles.git /tmp/dotfiles \
+    && cp /tmp/dotfiles/zshrc.symlink /root/.zshrc \
+    && cp /tmp/dotfiles/vimrc.symlink /root/.vimrc \
+    && cp -r /tmp/dotfiles/zsh.symlink /root/.zsh  \
+    && cp -r /tmp/dotfiles/vim.symlink /root/.vim  \
+    && zsh -i -c "cat /dev/null" \
+    && sed -i 's/^colorscheme /" colorscheme /' /root/.vimrc \
+    && sed -i '/fzf/s_\./install_echo nnn \\| \./install_' /root/.vimrc \
+    && vim +PlugInstall +qall \
+    && sed -i 's/^" colorscheme /colorscheme /' /root/.vimrc \
+    && sed -i "/'.*separator'/d" /root/.vimrc \
+    && sed -i '/fzf/d' /root/.bashrc \
+    && sed -i '/fzf/d' /root/.zshrc \
+    && touch /root/.z \
+    && rm -rf /tmp/dotfiles
+
