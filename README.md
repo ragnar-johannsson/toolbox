@@ -2,6 +2,8 @@
 
 A CoreOS toolbox container based on Debian Jessie, with some niceties such as zsh and a fully fledged vim. To use, instruct the toolbox utility to use `ragnarb/toolbox` instead of the default Fedora container.
 
+See the [Docker Hub](https://registry.hub.docker.com/u/ragnarb/toolbox/) entry for this container.
+
 ### Tools included
 
 The toolbox is geared towards performance metric gathering and debugging. Some of the tools include generic tools like htop, dstat and sar; more specific tools like iostat, iotop, blktrace, vmstat, slabtop, pidstat, lsof and mpstat; network tools like mtr, tcpdump, nicstat, iftop, ethtool and the iproute2 tools; and tools like strace/ltrace and sysdig for tracing. A docker binary matching the latest release on CoreOS stable is also included.
