@@ -1,6 +1,6 @@
 ## ragnarb/toolbox
 
-A CoreOS toolbox container based on Debian Jessie, with some niceties such as zsh and a fully fledged vim. To use, instruct the toolbox utility to use `ragnarb/toolbox` instead of the default fedora container.
+A CoreOS toolbox container based on Debian Jessie, with some niceties such as zsh and a fully fledged vim. To use, instruct the toolbox utility to use `ragnarb/toolbox` instead of the default Fedora container.
 
 ### Tools included
 
@@ -8,11 +8,11 @@ The toolbox is geared towards performance metric gathering and debugging. Some o
 
 Note that in order to use sysdig you must bind /dev from the host into the toolbox and run sysdig-probe-loader to load the relevant kernel module. To use the host's docker daemon from within the toolbox bind /var/run/docker.sock to /docker/docker.sock. See the next section for how to do this automatically.
 
-See the [Dockerfile](https://github.com/ragnar-johannsson/toolbox/blob/master/Dockerfile) for details on which tools are installed.
+For further details on what tools are installed, see the [Dockerfile](https://github.com/ragnar-johannsson/toolbox/blob/master/Dockerfile).
 
 ### Usage
 
-Configure the toolbox utility to use this container instead of the default one by specifying `TOOLBOX_DOCKER_IMAGE=ragnarb/toolbox` in **$HOME/.toolboxrc. See the [CoreOS documentation](https://coreos.com/docs/cluster-management/debugging/install-debugging-tools/) for details.
+Configure the toolbox utility to use this container instead of the default one by specifying `TOOLBOX_DOCKER_IMAGE=ragnarb/toolbox` in *$HOME/.toolboxrc*. See the [CoreOS documentation](https://coreos.com/docs/cluster-management/debugging/install-debugging-tools/) for details.
 
 Setting up the toolbox with /dev and /var/run/docker.sock bound and zsh instead of bash can done with a .toolboxrc along the lines of:
 
