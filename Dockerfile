@@ -15,6 +15,7 @@ RUN apt-get install -y --no-install-recommends \
 
 # Generic
 RUN apt-get install -y --no-install-recommends \
+        atop    \
         dstat   \
         htop    \
         ltrace  \
