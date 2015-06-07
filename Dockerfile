@@ -1,7 +1,7 @@
 FROM debian:jessie
 MAINTAINER Ragnar B. Johannsson <ragnar@igo.is>
 
-RUN apt-get update
+RUN sed -i 's/$/ contrib non-free/' /etc/apt/sources.list && apt-get update
 
 # Convenience
 RUN apt-get install -y --no-install-recommends \
