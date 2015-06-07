@@ -6,7 +6,7 @@ See the [Docker Hub](https://registry.hub.docker.com/u/ragnarb/toolbox/) entry f
 
 ### Tools included
 
-The toolbox is geared towards performance metric gathering and debugging. Some of the tools include generic ones like htop, dstat and sar; more specific tools like iostat, iotop, blktrace, vmstat, slabtop, pidstat, lsof and mpstat; network oriented tools like mtr, tcpdump, nicstat, iftop, ethtool and the iproute2 tools; and strace/ltrace and sysdig for tracing. A docker binary matching the latest release on CoreOS stable is also included.
+The toolbox is geared towards performance metric gathering and debugging. Some of the tools include generic ones like htop, dstat, atop and sar; more specific tools like iostat, iotop, blktrace, iozone, vmstat, slabtop, pidstat, lsof and mpstat; network oriented tools like mtr, tcpdump, nicstat, iftop, iperf, ethtool and the iproute2 tools; and strace/ltrace and sysdig for tracing. A docker binary matching the latest release on CoreOS stable is also included.
 
 Note that in order to use sysdig you must bind /dev from the host into the toolbox and run sysdig-probe-loader to load the relevant kernel module. To use the host's docker daemon from within the toolbox bind /var/run/docker.sock to /docker/docker.sock. See the usage section below for how to do this automatically.
 
