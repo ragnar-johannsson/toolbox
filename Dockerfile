@@ -26,6 +26,7 @@ RUN apt-get install -y --no-install-recommends \
 RUN apt-get install -y --no-install-recommends \
         blktrace \
         iotop    \
+        iozone3  \
         lsof
 
 # Networking
