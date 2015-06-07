@@ -37,6 +37,7 @@ RUN apt-get install -y --no-install-recommends \
         curl            \
         ethtool         \
         iftop           \
+        iperf           \
         iproute2        \
         mtr-tiny        \
         net-tools       \
