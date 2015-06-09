@@ -80,8 +80,8 @@ RUN git clone https://github.com/ragnar-johannsson/dotfiles.git /tmp/dotfiles \
     && vim +PlugInstall +qall \
     && sed -i 's/^" colorscheme /colorscheme /' /root/.vimrc \
     && sed -i "/'.*separator'/d" /root/.vimrc \
-    && sed -i '/fzf/d' /root/.bashrc \
-    && sed -i '/fzf/d' /root/.zshrc \
+    && sed -i '/fzf/d; /^# GQ/d; /DEVMANAGEMENT/d' /root/.bashrc /root/.zshrc \
+    && echo 'ln -s /docker/docker.sock /var/run/docker.sock 2>/dev/null' >> /root/.zshrc \
     && touch /root/.z \
     && rm -rf /tmp/dotfiles
 
