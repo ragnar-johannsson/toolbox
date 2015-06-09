@@ -66,9 +66,7 @@ RUN echo "deb https://get.docker.com/ubuntu docker main" \
         --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9 \
     && apt-get install -y --no-install-recommends apt-transport-https \
     && apt-get update \
-    && apt-get install -y --no-install-recommends lxc-docker-1.5.0 \
-    && echo "DOCKER_OPTS=\"-H unix:///docker/docker.sock\"" \
-        > /etc/default/docker
+    && apt-get install -y --no-install-recommends lxc-docker-1.6.2
 
 # Dotfiles
 RUN git clone https://github.com/ragnar-johannsson/dotfiles.git /tmp/dotfiles \
